@@ -1,0 +1,447 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*Testing CSS*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input[type=text], input[type=password], input[type=file], input[type=submit], textarea{-webkit-appearance:none;}
+html,
+body{height:100%;}
+body{
+	-webkit-text-size-adjust:100%;
+	min-width:320px;
+	color:#000;
+	font:14px/23px SentinelLight, "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+	background:#fff;
+}
+a{
+	text-decoration:none;
+	color:#fce35c;
+}
+a:hover{text-decoration:underline;}
+input,
+textarea,
+select{
+	font:100% Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*type*/
+@font-face {
+    font-family: 'LibelSuitRegular';
+    src: url('libelsuit.eot');
+    src: url('libelsuit.eot') format('embedded-opentype'),
+         url('libelsuit.woff') format('woff'),
+         url('libelsuit.ttf') format('truetype'),
+         url('libelsuit.svg#LibelSuitRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'SentinelLight';
+    src: url('sentinel-light.eot');
+    src: url('sentinel-light.eot') format('embedded-opentype'),
+         url('sentinel-light.woff') format('woff'),
+         url('sentinel-light.ttf') format('truetype'),
+         url('sentinel-light.svg#SentinelLight') format('svg');
+}
+
+@font-face {
+    font-family: 'MrEavesSanOTBold';
+    src: url('mreavessanot-bold.eot');
+    src: url('mreavessanot-bold.eot') format('embedded-opentype'),
+         url('mreavessanot-bold.woff') format('woff'),
+         url('mreavessanot-bold.ttf') format('truetype'),
+         url('mreavessanot-bold.svg#MrEavesSanOTBold') format('svg');
+}
+
+@font-face {
+    font-family: 'MrEavesSanOTReg';
+    src: url('mreavessanot-reg.eot');
+    src: url('mreavessanot-reg.eot') format('embedded-opentype'),
+         url('mreavessanot-reg.woff') format('woff'),
+         url('mreavessanot-reg.ttf') format('truetype'),
+         url('mreavessanot-reg.svg#MrEavesSanOTReg') format('svg');
+}
+
+
+h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1; font-family: LibelSuitRegular, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; margin-bottom: 0.61842105em; }
+h5{ font-size: 1.25em; text-transform: uppercase; font-weight: bold; font-family: Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
+p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
+
+/*texture and background classes*/
+.collage-texture { background: url(../img/collage-texture.jpg) repeat; }
+.yellow-overlay { background: url(../img/yellow-overlay.png) repeat; color: #000; }
+.white-overlay { background: url(../img/white-overlay.png) repeat; color: #000; }
+.text-block { text-align: left; }
+.stretch {position: absolute; height: 100%;}
+
+/*dougs letter slides*/
+#dougs-letter { position: relative; }
+#dougs-letter .gallery { min-height: 577px; }
+#doug-portrait{ width: 30.9375%; height: 474px; /*396 / 1280*/ position: absolute; top: 10%; z-index: 100; display: block; background: url(../img/doug-portrait.jpg) no-repeat 0 0; }
+#dougs-letter .yellow-overlay { margin-left: 32.265625%;/**/ width: 67.734375%;/**/ margin-top: 15px; }
+#dougs-letter .stretch { height: 97.4093264%; }
+#dougs-letter .text-block { padding-left: 40.546875%; /*519 / 1280*/ padding-right: 32.03125%; /*410 / 1280*/ padding-top: 56px; padding-bottom: 66px; }
+#dougs-letter .slide-one .text-block .yellow-overlay { padding-left: 4.296875%; /*55 / 1280*/; padding-right: 24.296875%; /*311 / 1280*/ padding-top: 8em;}
+
+
+/* gallery */
+.gallery {
+	background: transparent;
+	overflow:hidden;
+	position:relative;
+}
+
+
+.gallery img{
+	margin:0 auto;
+}
+
+.gallery .gmask{
+	margin:0 auto;
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.gallery .gmask ul:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.gallery .gmask ul li{
+	float:left;
+	position:relative;
+	width:100%;
+    text-align: center;
+    /*margin:1px 14% 73px;*/
+}
+.gallery .btn-prev,
+.gallery .btn-next{
+	z-index:5;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:12px;
+	height:12px;
+	background:url(../img/arrows-sprite.png) 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 12px;
+}
+
+.gallery .btn-next{
+	background:url(../img/arrows-sprite.png) 0 -12px no-repeat;
+}
+
+
+
+/* pagination */
+.pagination-wrap { width: 100%; text-align: center; position: absolute; bottom: 25px; }
+
+.order-gallery .pagination,
+.gallery .pagination{
+	left:0;
+	bottom:10px;
+	overflow:hidden;
+	display: inline;
+}
+.order-gallery .pagination{bottom:0;}
+.pagination ul{
+	text-align:center;
+	display: inline;
+}
+.order-gallery .pagination ul{
+	width:auto;
+	padding:0 58% 0 0;
+}
+.pagination ul li{
+	display:inline-block;
+	vertical-align:top;
+	margin:0 0 0 12px;
+}
+.order-gallery .pagination ul li{margin:0 0 0 20px;}
+.pagination ul li:first-child{margin:0 !important;}
+.pagination ul a{
+	display:block;
+	border-radius:11px;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	background:#fff;
+	width:11px;
+	height:11px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.pagination ul .active a,
+.pagination ul a:hover{background:#000;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 769px) {
+	/*General*/
+	
+	
+	/*Dougs Letter*/
+	#doug-portrait { display: none; }
+	#dougs-letter .text-block { padding-left: 5%; padding-right: 10%; }
+	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
