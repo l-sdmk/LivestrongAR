@@ -167,10 +167,18 @@ select{
          url('mreavessanot-reg.svg#MrEavesSanOTReg') format('svg');
 }
 
+.libelsuitreg { font-family: LibelSuitRegular, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; }
+.mreavessansbold { font-family: MrEavesSanOTBold; }
+.mreavessansreg { font-family: MrEavesSanOTReg; }
+.metroblacktwo { font-family: Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
 
-h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1; font-family: LibelSuitRegular, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; margin-bottom: 0.61842105em; }
-h5{ font-size: 1.25em; text-transform: uppercase; font-weight: bold; font-family: Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
+h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1;  margin-bottom: 0.61842105em; }
+h5{ font-size: 1.25em; text-transform: uppercase; font-weight: bold; }
 p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
+.gallery .gmask ul.normal { position: relative;  }
+.gallery .gmask ul.normal li { width: auto; text-align: left; float: none;  }
+
+.yellow { color: #ffd514; }
 
 /*texture and background classes*/
 .collage-texture { background: url(../img/collage-texture.jpg) repeat; }
@@ -185,8 +193,18 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 #doug-portrait{ width: 30.9375%; height: 474px; /*396 / 1280*/ position: absolute; top: 10%; z-index: 100; display: block; background: url(../img/doug-portrait.jpg) no-repeat 0 0; }
 #dougs-letter .yellow-overlay { margin-left: 32.265625%;/**/ width: 67.734375%;/**/ margin-top: 15px; }
 #dougs-letter .stretch { height: 97.4093264%; }
-#dougs-letter .text-block { padding-left: 40.546875%; /*519 / 1280*/ padding-right: 32.03125%; /*410 / 1280*/ padding-top: 56px; padding-bottom: 66px; }
+#dougs-letter .text-block { margin-left: 40.546875%; /*519 / 1280*/ padding-right: 32.03125%; /*410 / 1280*/ padding-top: 56px; padding-bottom: 66px; }
 #dougs-letter .slide-one .text-block .yellow-overlay { padding-left: 4.296875%; /*55 / 1280*/; padding-right: 24.296875%; /*311 / 1280*/ padding-top: 8em;}
+
+/*navigation services slides*/
+#navigation-services { background: #000; }
+#navigation-services .gallery { min-height: 577px; background: #000; }
+#navigation-services .slide-one { background: #000; color: #fff; padding-top: 152px; }
+#navigation-services .slide-one .text-block { width: 26.40625%; /*338 / 1280*/  /*423 / 1280*/ margin-bottom: 100px; float: left; }
+#navigation-services .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 100%;}
+#navigation-services .slide-one h1 { font-size: 1.2em; line-height: 1.3; }
+#navigation-services ul.normal li { font-size: .8275em; }
+
 
 
 /* gallery */
@@ -232,37 +250,51 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 	margin: 0 12px;
 }
 
-.gallery .btn-next{
+.gallery .btn-next.light{
 	background:url(../img/arrows-sprite.png) 0 -12px no-repeat;
 }
+
+.pagination-wrap.light .gallery .btn-prev,
+.gallery .btn-next{
+	z-index:5;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:12px;
+	height:12px;
+	background:url(../img/arrows-sprite.png) 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 12px;
+}
+
+.gallery .btn-next.light{
+	background:url(../img/arrows-sprite.png) 0 -12px no-repeat;
+}
+
 
 
 
 /* pagination */
 .pagination-wrap { width: 100%; text-align: center; position: absolute; bottom: 25px; }
 
-.order-gallery .pagination,
 .gallery .pagination{
 	left:0;
 	bottom:10px;
 	overflow:hidden;
 	display: inline;
 }
-.order-gallery .pagination{bottom:0;}
+
 .pagination ul{
 	text-align:center;
 	display: inline;
 }
-.order-gallery .pagination ul{
-	width:auto;
-	padding:0 58% 0 0;
-}
+
 .pagination ul li{
 	display:inline-block;
 	vertical-align:top;
 	margin:0 0 0 12px;
 }
-.order-gallery .pagination ul li{margin:0 0 0 20px;}
+
 .pagination ul li:first-child{margin:0 !important;}
 .pagination ul a{
 	display:block;
@@ -278,39 +310,6 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 .pagination ul .active a,
 .pagination ul a:hover{background:#000;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media screen and (max-width: 769px) {
-	/*General*/
-	
-	
-	/*Dougs Letter*/
-	#doug-portrait { display: none; }
-	#dougs-letter .text-block { padding-left: 5%; padding-right: 10%; }
-	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
 
 /* ==========================================================================
    Helper classes
@@ -444,4 +443,31 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
         page-break-after: avoid;
     }
 }
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 769px) {
+	/*General*/
+	
+	
+	/*Dougs Letter*/
+	#doug-portrait { display: none; }
+	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; }
+	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
+	
+	/*Navigation Services*/
+	#navigation-services .slide-one img { margin-right: 100%; }
+	#navigation-services .slide-one .text-block { width: auto; padding-left: 9.5687332%; padding-right: 9.707447%; float: right; }
+	
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
 
