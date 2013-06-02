@@ -85,20 +85,45 @@
 							</div>
 				        </li>
 				        <li class="slide-two black-overlay">
-							<a href="#" class="video-thumb" id="melissa-video"><img src="img/melissa-thumb.jpg" style="max-width: 100%;" alt="" /></a>
-							<div class="video-container"></div>
-							<h3 class="sentinelblackitalic yellow">Just ask Melissa from our Navigation Services Department at the Foundation</h3>
-							<div style="clear: both;"></div>			
-							
+							<div class="relative">
+								<a href="#" class="video-thumb" id="melissa-video"><img src="img/melissa-thumb.jpg" style="max-width: 100%;" alt="" /></a>
+								<div class="video-container"></div>
+								<h3 class="sentinelblackitalic yellow">Just ask Melissa from our Navigation Services Department at the Foundation</h3>
+								<div style="clear: both;"></div>
+							</div>			
 				        </li>
-						<li class="slide-three">
-							<div class="text-block block">
-								<p>Fourth, we worked closely with our many programmatic and cause marketing partners to strengthen our financial future, innovate expansions of our efforts and deliver first-rate services for those in need.</p>
-								<p>Our accomplishments would not be possible without the steadfast commitment of our Chairman Jeff Garvey, our Board of Directors and our millions of dedicated supporters. Our success has always been derived from people from all walks of life that meet a cancer diagnosis with hope and more than a little grit. We are inspired by you to dream bigger and reach further.</p>
-								<p>Although some things have changed, one thing remains absolutely true: this Foundation doesn’t back down from a challenge. Make no mistake that we will forge ahead boldly in 2013 to continue making a difference in the lives of people affected by cancer.</p>
-								<p style="font-family: 'MrEavesSanOTReg'">LIVE<span style="font-family: 'MrEavesSanOTBold'">STRONG,</span><br />Doug Ulman — President &amp; CEO</p>
+						<li class="slide-three black-overlay">
+							<div class="info-graphic money">
+								<img src="img/money.png" alt="" />
+								<p class="yellow mreavessansreg">We saw an 11% increase in new client intake over 2011</p>
 							</div>
+							<div class="info-graphic increase">
+								<img src="img/increase.png" alt="" />
+								<p class="yellow mreavessansreg">We supported more than 15,000 people affected by cancer in person, on the phone or online</p>
+							</div>
+							<div class="info-graphic clients">
+								<img src="img/clients.png" alt="" />
+								<p class="yellow mreavessansreg">We saved clients nearly $6,000,000 in health care expenses</p>
+							</div>
+							<div style="clear: both;"></div>
 						</li>
+						<li class="slide-four black-overlay">
+							<div class="relative">
+								<h2 class="mreavessansreg white caps">But for us, the proof is always in the people. Never a number, but a name. Never a statistic, but a voice. Introducing Iram and Sarah.</h2>
+								<a href="#" class="video-thumb" id="iram-video"><img src="img/iram-thumb.jpg" style="max-width: 100%;" alt="" /></a>
+								<div class="video-container"></div>
+								<h3 class="sentinelblackitalic yellow"><span class="mreavessansbold">IRAM</span><br /><span class="mreavessansreg">brain cancer</span><br /><br />“I was afraid cancer meant I pushed someone I loved away.”</h3>
+								<div style="clear: both;"></div>
+							</div>			
+				        </li>
+						<li class="slide-five black-overlay">
+							<div class="relative">
+								<a href="#" class="video-thumb" id="sarah-video"><img src="img/sarah-thumb.jpg" style="max-width: 100%;" alt="" /></a>
+								<div class="video-container"></div>
+								<h3 class="sentinelblackitalic yellow"><span class="mreavessansbold">Sarah</span><br /><span class="mreavessansreg">two-time breast cancer survivor </span><br /><br />“I was afraid cancer meant I couldn’t have children.”</h3>
+								<div style="clear: both;"></div>
+							</div>			
+				        </li>
 				    </ul>
 				</div>
 				<!-- pagination -->
@@ -122,10 +147,23 @@
 		<script type="text/javascript">
 			$('#melissa-video').on('click', function(event) {
 				event.preventDefault();
-				$(this).fadeOut();
-				$('.video-container').show();
-			    $('.video-container').html('<iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
-				
+				$(this).hide();
+				$('.slide-two .video-container').show();
+			    $('.slide-two .video-container').html('<iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			});
+			
+			$('#iram-video').on('click', function(event) {
+				event.preventDefault();
+				$(this).hide();
+				$('.slide-four .video-container').show();
+			    $('.slide-four .video-container').html('<iframe src="http://www.youtube.com/embed/X5cKt9vBeFA?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			});
+			
+			$('#sarah-video').on('click', function(event) {
+				event.preventDefault();
+				$(this).hide();
+				$('.slide-five .video-container').show();
+			    $('.slide-five .video-container').html('<iframe src="http://www.youtube.com/embed/1hPLWtMU1Mg?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
 			});
 		</script>
 		
