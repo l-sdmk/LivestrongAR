@@ -84,11 +84,12 @@
 								</ul>
 							</div>
 				        </li>
-				        <li class="slide-two">
-							<div class="text-block block">
-								<p>First, thanks to your hard work and support, we surpassed the 2.5-million-people-served milestone by helping a record number of people in 2012 through our free, one-on-one cancer support services. Offered in person, by phone and online, these highly personalized, deeply engaged services connect people to treatment options, financial counseling, clinical trial access, fertility preservation, insurance and transportation assistance, emotional support and much more. With 14 million Americans living with cancer now and 4,500 Americans receiving new diagnoses each day, we know the need is great. Most important, we know it works.  Research shows that addressing the concerns of the whole patient, alongside their medical treatment, produces measurably better outcomes in improved quality of life and prolonged survival.</p>
-								<p>Second, in 2012, we worked on the front lines and across the globe to advance cancer care. We engaged in public policy matters that affect people with cancer and fought against the cancer stigmas that still exist – hampering life-saving diagnoses and treatment – in many parts of the world. Third, we continued our groundbreaking work to foster ongoing dialogue with cancer patients and survivors, through Foundation research and surveys, and gained deeper insights that inform both our programs and the wider cancer community’s treatment protocols.</p>
-							</div>
+				        <li class="slide-two black-overlay">
+							<a href="#" class="video-thumb" id="melissa-video"><img src="img/melissa-thumb.jpg" style="max-width: 100%;" alt="" /></a>
+							<div class="video-container"></div>
+							<h3 class="sentinelblackitalic yellow">Just ask Melissa from our Navigation Services Department at the Foundation</h3>
+							<div style="clear: both;"></div>			
+							
 				        </li>
 						<li class="slide-three">
 							<div class="text-block block">
@@ -117,14 +118,15 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		
-		<!--don't need-->
+		<!--YouTube Splashes-->
 		<script type="text/javascript">
-		/*	$(document).ready(function(){
-				$('.pagination ul').prepend('<li><a class="btn-prev" href="#">prev</a></li>');
-				$('.pagination ul').append('<li><a class="btn-next" href="#">next</a></li>');
+			$('#melissa-video').on('click', function(event) {
+				event.preventDefault();
+				$(this).fadeOut();
+				$('.video-container').show();
+			    $('.video-container').html('<iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+				
 			});
-		*/
-			
 		</script>
 		
 
