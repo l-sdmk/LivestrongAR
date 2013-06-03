@@ -176,7 +176,7 @@ select{
          url('sentinel-blackitalic.svg#SentinelBlackItalic') format('svg');
 }
 
-
+.mobile { display: none; }
 .libelsuitreg { font-family: LibelSuitRegular, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; }
 .mreavessansbold { font-family: MrEavesSanOTBold; }
 .mreavessansreg { font-family: MrEavesSanOTReg; }
@@ -198,10 +198,25 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 /*texture and background classes*/
 .collage-texture { background: url(../img/collage-texture.jpg) repeat; }
 .yellow-overlay { background: url(../img/yellow-overlay.png) repeat; color: #000; }
+.pale-yellow-overlay { background: url(../img/pale-yellow-overlay.png) repeat; color: #000; }
 .white-overlay { background: url(../img/white-overlay.png) repeat; color: #000; }
 .black-overlay { background: url(../img/black-overlay.png) repeat; color: #000; }
 .text-block { text-align: left; }
 .stretch {position: absolute; height: 100%;}
+
+/*Mission*/
+#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; }
+#mission .yellow-overlay { opacity: .9; width: 100%; height: 100%; margin-top: -8.1658291%; /*65 / 796*/ }
+#mission .relative { padding-top: 32.160804%; /*256 / 796*/ }
+#mission .relative img { display: block; margin: 0 auto; max-width: 100%; }
+#mission .mission { padding-bottom: 16.959799%; /*135 / 796*/ }
+#mission .lsf-logo { padding-bottom: 20.728643%; /*165 / 796*/ }
+
+/*Our Time*/
+#our-time { background: white; }
+#our-time img { float: left; margin-right: 4.296875%; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
+#our-time .text-block { /*margin-right: 17.96875%; 230 / 1280*/ width: 25.78125%; /*330 / 1280*/ padding: 50px 0; float: left; }
+#our-time h6 { font-size: 1.3em; }
 
 /*dougs letter slides*/
 #dougs-letter { position: relative; }
@@ -217,7 +232,7 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 #navigation-services .gallery { min-height: 425px; background: #000; }
 #navigation-services .slide-one { background: #000; color: #fff;  }
 #navigation-services .slide-one .text-block { width: 26.40625%; /*338 / 1280*/  /*423 / 1280*/ float: left; }
-#navigation-services .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 50%;}
+#navigation-services .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 100%;}
 #navigation-services .slide-one h1 { font-size: 1.2em; line-height: 1.3; }
 #navigation-services ul.normal li { font-size: .8275em; }
 #navigation-services .slide-one, #navigation-services .slide-two,  #navigation-services .slide-three,  #navigation-services .slide-four, #navigation-services .slide-five { padding-top: 100px; padding-bottom: 100px; }
@@ -231,6 +246,11 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 #navigation-services .slide-four h3 { font-size: .8275em; line-height: 1.3; font-weight: normal; width: 13.828125%; /*177 / 1280*/ position: absolute; bottom: 0; left: 83.671875%;/*17.578125%; + 5.46875% + 3.90625% + 54.84375% + 1.875%*/ text-align: left; }
 #navigation-services .slide-five h3 { font-size: .8275em; line-height: 1.3; font-weight: normal; width: 13.828125%; /*177 / 1280*/ float: left; text-align: left; position: absolute; bottom: 0; left: 76.953125%;/*54.84375% + 20.234375% + 1.875%*/ }
 
+/*program slides*/
+#program { background: url('../img/program-bg.jpg') 0 0 no-repeat; background-size: cover; min-height: 581px; }
+#program .pale-yellow-overlay { width: 100%; height: 100%; }
+#program .slide-one .text-block { padding-left: 5.46875%;/*70 / 1280*/ padding-right: 60.546875%;/*775 / 1280*/ }
+#program .slide-one, #program .slide-two,  #program .slide-three { padding-top: 100px; padding-bottom: 100px; }
 
 /* gallery */
 .gallery {
@@ -490,36 +510,53 @@ p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
 
 @media screen and (max-width: 769px) {
 	/*General*/
+	.mobile { display: block; }
 	.gallery .gmask { height: auto !important; }
 	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
-	.gallery .gmask li { width: auto !important; float: none; }
+	.gallery .gmask li { width: 90% !important; float: none; }
 	.pagination-wrap { display: none !important; }
 	
+	/*Misson*/
+	#mission img.mission { max-width: 90%; }
+	#mission .lsf-logo { width: 40%; }
 	
+	/*Our Time*/
+	#our-time { padding: 0 5% 0 10%; }
+	#our-time img { max-width: 100%; padding-bottom: 0; margin-left: -12%; }
+	#our-time .text-block { width: 100%; }
 	
 	/*Dougs Letter*/
 	#doug-portrait { display: none; }
-	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; }
+	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; }
+	#dougs-letter .slide-two .text-block, #dougs-letter .slide-three .text-block { padding-top: 0; }
 	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
 	
 	/*Navigation Services*/
-	#navigation-services .slide-one img { margin-right: 100%; }
+	#navigation-services .slide-one img { margin-right: 100%; margin-left: -6%; }
 	#navigation-services .slide-one .text-block { width: auto; padding-left: 9.5687332%; padding-right: 9.707447%; float: right; }
-	#navigation-services .slide-two h3 { font-size: 1em; line-height: 1.3; font-weight: normal; width: 90%; /*177 / 1280*/  text-align: center; margin: 0 5% 10 5%; margin-top: 25px; position: relative; bottom: 0; left: 0; }
+	#navigation-services .slide-two h3 { font-size: 1em; line-height: 1.3; font-weight: normal; width: 100%; text-align: center; margin-top: 25px; position: relative; bottom: 0; left: 0; }
 	.info-graphic.money { margin-left: 5%; margin-bottom: 65px; }
 	.info-graphic { width: 90%; float: none; margin: 0 5%; margin-bottom: 10px; }
 	.info-graphic img { max-width: 50%; margin-bottom: 10px;}
-	#navigation-services .slide-four h2 { width: auto; text-align: center; float: none; padding-top: 0; margin: 0 5% 10px 5%; }
+	#navigation-services .slide-four h2 { width: auto; text-align: center; float: none; padding-top: 0; margin: 30px 5% 30px 5%; }
 	#navigation-services .slide-four h3 { position: relative; width: auto; text-align: center; float: none; padding-top: 0; margin: 25px 5% 10px 5%; left: 0; }
 	#navigation-services .slide-four h3 br { display: none; }
 	#navigation-services .slide-four h3 span { margin: 0 6px 0 0; }
 	#navigation-services .slide-five h3 { position: relative; width: auto; text-align: center; float: none; padding-top: 0; margin: 25px 5% 10px 5%; left: 0; }
 	#navigation-services .slide-five h3 br { display: none; }
 	#navigation-services .slide-five h3 span { margin: 0 6px 0 0; }
+
+	
+	#navigation-services .slide-one, #navigation-services .slide-two, #navigation-services .slide-three, #navigation-services .slide-four, #navigation-services .slide-five { padding: 50px 5%; }
+	#navigation-services .slide-five { padding: 0 5% 50px 5%; }
+	
+	/*Program*/
+	#program .slide-one .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; }
+	#program .slide-one .text-block h1 br{ display: none; }
 	
 	/*Video*/
-	.video-container { margin: 0 auto; width: auto; max-width: 91%; padding-bottom: 50%; margin-bottom: 0; float: none; }
-	.video-thumb { margin: 0 auto; max-width: 54.84375%; /*259 / 1280*/ float: none; margin-bottom: 0; }	
+	.video-container { margin: 0 auto; width: 100%; max-width: 100%; padding-bottom: 64%; margin-bottom: 0; float: none; }
+	.video-thumb { margin: 0 auto; float: none; margin-bottom: 0; }	
 	
 	
 }
