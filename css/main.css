@@ -185,7 +185,7 @@ select{
 
 h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1;  margin-bottom: 0.61842105em; }
 h5{ font-size: 1.25em; text-transform: uppercase; font-weight: bold; }
-p{ margin-bottom: 2em; font-size: .8275em; line-height: 1.6;}
+p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 .gallery .gmask ul.normal { position: relative;  }
 .gallery .gmask ul.normal li { width: auto; text-align: left; float: none;  }
 
@@ -522,13 +522,19 @@ li.fin { width: 60px; }
    Media Queries
    ========================================================================== */
 
-@media screen and (max-width: 1025px) {
-	#navigation { width: 90%; margin: 0; }
+@media screen and (max-width: 1030px) {
+	#navigation { width: 90%; margin: 0 5%; }
 }
 
-@media screen and (max-width: 1007px) {
+@media screen and (max-width: 805px) {
 	#navigation { width: 100%; margin: 0; }
+	
+	/*Our Time*/
+	#our-time { padding: 0 5% 0 10%; }
+	#our-time img { max-width: 100%; padding-bottom: 0; margin-left: -12%; }
+	#our-time .text-block { width: 100%; }
 }
+
 
 @media screen and (max-width: 769px) {
 	/*General*/

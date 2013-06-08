@@ -338,48 +338,48 @@
 			     edgeMargin    = 1,   // margin above the top or margin from the end of the page
 			     animationTime = 1200, // time in milliseconds
 			     contentTop = [];
+			
+				function updateNav() {
 
-			$(document).ready(function(){ 
+				 // Stop animated scroll if the user does something
+				 $('html,body').bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(e){
+				 if ( e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel' ){
+				  $('html,body').stop();
+				 }
+				})
 
-			 // Stop animated scroll if the user does something
-			 $('html,body').bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(e){
-			 if ( e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel' ){
-			  $('html,body').stop();
-			 }
-			})
+				 // Set up content an array of locations
+				contentTop = [];
+				 $('#navigation').find('a').each(function(){
+					var the_id = $(this).attr('href').substring(1);
+					//console.log(the_id);
+				  	contentTop.push( $( $(this).attr('href') ).offset().top );
+				 })
 
-			 // Set up content an array of locations
-			 $('#navigation').find('a').each(function(){
-				var the_id = $(this).attr('href').substring(1);
-				//console.log(the_id);
-			  	contentTop.push( $( $(this).attr('href') ).offset().top );
-			 })
+				 // Animate menu scroll to content
+				  $('#navigation').find('a').click(function(){
+				   var sel = this,
+				       newTop = Math.min( contentTop[ $('#navigation a').index( $(this) ) ], $(document).height() - $(window).height() ); // get content top or top position if at the document bottom
+				   $('html,body').stop().animate({ 'scrollTop' : newTop }, animationTime, 'easeInOutExpo', function(){
+				    window.location.hash = $(sel).attr('href');
+				   });
+				   return false;
+				 })
 
-			 // Animate menu scroll to content
-			  $('#navigation').find('a').click(function(){
-			   var sel = this,
-			       newTop = Math.min( contentTop[ $('#navigation a').index( $(this) ) ], $(document).height() - $(window).height() ); // get content top or top position if at the document bottom
-			   $('html,body').stop().animate({ 'scrollTop' : newTop }, animationTime, 'easeInOutExpo', function(){
-			    window.location.hash = $(sel).attr('href');
-			   });
-			   return false;
-			 })
-
-			 // adjust side menu
-			 $(window).scroll(function(){
-			  var winTop = $(window).scrollTop(),
-			      bodyHt = $(document).height(),
-			      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
-			  $.each( contentTop, function(i,loc){
-			   if ( ( loc > winTop - edgeMargin && ( loc < winTop + topRange || ( winTop + vpHt ) >= bodyHt ) ) ){
-			    $('#navigation li')
-			     .removeClass('selected')
-			     .eq(i).addClass('selected');
-			   }
-			  })
-			 })
-
-			})
+				 // adjust navigation menu
+				 $(window).scroll(function(){
+				  var winTop = $(window).scrollTop(),
+				      bodyHt = $(document).height(),
+				      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
+				  $.each( contentTop, function(i,loc){
+				   if ( ( loc > winTop - edgeMargin && ( loc < winTop + topRange || ( winTop + vpHt ) >= bodyHt ) ) ){
+				    $('#navigation li')
+				     .removeClass('selected')
+				     .eq(i).addClass('selected');
+				   }
+				  })
+				 })
+				}
 		</script>
 		
 		<!--YouTube Thumbs-->
@@ -408,17 +408,31 @@
 		
 		<!--Stick Nav on Scroll-->
 		<script type="text/javascript">
-			$(function(){ // document ready
-			  var stickyTop = $('#navigation').offset().top; // returns number
-			  $(window).scroll(function(){ // scroll event
-			    var windowTop = $(window).scrollTop(); // returns number
-			    if (stickyTop < windowTop) {
-			      $('#navigation').addClass('fixed');
-			    }
-			    else {
-			      $('#navigation').removeClass('fixed');
-			    }
-			  });
+			function stickNavigation() {
+				var stickyTop = $('#navigationservices').offset().top; // returns number
+				var navTop = $('#navigation').offset().top;
+				console.log(stickyTop);
+				
+				console.log(navTop);
+				  $(window).scroll(function(){ // scroll event
+				    var windowTop = $(window).scrollTop(); // returns number
+				    if (stickyTop < windowTop) {
+				      $('#navigation').addClass('fixed');
+				    }
+				    else {
+				      $('#navigation').removeClass('fixed');
+				    }
+				  });
+			}
+			
+			$(window).load(function () { // document ready
+				stickNavigation();
+				updateNav();
+			});
+			
+			$(window).resize(function() {
+				stickNavigation();
+				updateNav();
 			});
 		</script>
 
