@@ -176,11 +176,31 @@ select{
          url('sentinel-blackitalic.svg#SentinelBlackItalic') format('svg');
 }
 
+@font-face {
+    font-family: 'MetroBlack';
+    src: url('metroblatwo.eot');
+    src: url('metroblatwo.eot') format('embedded-opentype'),
+         url('metroblatwo.woff') format('woff'),
+         url('metroblatwo.ttf') format('truetype'),
+         url('metroblatwo.svg#MetroRegular') format('svg');
+}
+@font-face {
+    font-family: 'MetroLite';
+    src: url('metrolittwo.eot');
+    src: url('metrolittwo.eot') format('embedded-opentype'),
+         url('metrolittwo.woff') format('woff'),
+         url('metrolittwo.ttf') format('truetype'),
+         url('metrolittwo.svg#MetroRegular') format('svg');
+}
+
+
+
 .mobile { display: none; }
 .libelsuitreg { font-family: LibelSuitRegular, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; }
 .mreavessansbold { font-family: MrEavesSanOTBold; }
 .mreavessansreg { font-family: MrEavesSanOTReg; }
-.metroblacktwo { font-family: Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
+.metroblacktwo { font-family: MetroBlack, Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
+.metrolitetwo { font-family: MetroLite, Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
 .sentinelblackitalic { font-family: 'SentinelBlackItalic'; }
 
 h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1;  margin-bottom: 0.61842105em; }
@@ -201,6 +221,7 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 .pale-yellow-overlay { background: url(../img/pale-yellow-overlay.png) repeat; color: #000; }
 .white-overlay { background: url(../img/white-overlay.png) repeat; color: #000; }
 .black-overlay { background: url(../img/black-overlay.png) repeat; color: #000; }
+.light-black-overlay { background: url(../img/light-black-overlay.png) repeat; color: #000;  }
 .text-block { text-align: left; }
 .stretch {position: absolute; height: 100%;}
 
@@ -229,7 +250,7 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 
 /*navigation*/
 #navigation { min-width: 70.15625%; /*898 / 1280*/ text-align: center; background: url(../img/navigation-bg.png) no-repeat; z-index: 1000; position: absolute; padding: 10px 0 15px 0; margin: 0 14.921875%; background-size: 100%;}
-#navigation.fixed { position: fixed !important; top: 0 !important; }
+#navigation.fixed { display: block; position: fixed !important; top: 0 !important; }
 #navigation li { display: inline-block; padding-right: 30px; }
 #navigation a { color: #000; font-family: MrEavesSanOTReg; font-size: 12px;  }
 #navigation a:hover, #navigation .selected a, #navigation .selected a:hover { color: #ffd204; font-family: MrEavesSanOTBold; text-decoration: none; font-size: 12åpx; letter-spacing: 1; }
@@ -265,6 +286,18 @@ li.fin { width: 60px; }
 #program .pale-yellow-overlay { width: 100%; height: 100%; }
 #program .slide-one .text-block { padding-left: 5.46875%;/*70 / 1280*/ padding-right: 60.546875%;/*775 / 1280*/ }
 #program .slide-one, #program .slide-two,  #program .slide-three { padding-top: 100px; padding-bottom: 100px; }
+#program .slide-two .text-block { width: 24.609375%; /*315 / 1280*/ margin-right: 4.6875%; /*60 / 1280*/ }
+#program .slide-three #charts { overflow: visible; width: 50%; padding-top: 50px; padding-bottom: 25px; padding-left: 5%; padding-right: 5%; }
+#program .slide-three small { width: 14.0625%; /*180 / 1280*/ line-height: 1.2; text-align: left; font-size: .75em; margin-left: 5.46875%; margin-right: 5.46875%; /*70 / 1280*/ display: block; }
+
+/*impact slides*/
+#impact .slide-one img { margin-top: -50px; }
+#impact .slide-one #invested.text-block { width: 24.21875%; /*310 / 1280*/ padding-left: 5.859375%;/*75 / 1280*/ padding-right: 3.90625%;/*50 / 1280*/ font-size: 2.2em; margin-top: 60px; line-height: 1.4; font-weight: normal; }
+#impact .slide-one #impacting.text-block { width: 25.78125%; /*330 / 1280*/ margin-top: 200px; }
+#impact .slide-one #impacting.text-block h3 { font-size: 1.4em; line-height: 1.3; }
+#impact .slide-one #impacting.text-block p { font-size: .6em; }
+#impact .slide-one, #impact .slide-two,  #impact .slide-three { padding-top: 100px; padding-bottom: 100px; }
+
 
 /* gallery */
 .gallery {
@@ -293,8 +326,6 @@ li.fin { width: 60px; }
 	float:left;
 	position:relative;
 	width:100%;
-    text-align: center;
-    /*margin:1px 14% 73px;*/
 }
 .gallery .btn-prev,
 .gallery .btn-next{
@@ -447,6 +478,8 @@ li.fin { width: 60px; }
     *zoom: 1;
 }
 
+.fleft { float: left; }
+.fright { float: right; }
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -526,7 +559,18 @@ li.fin { width: 60px; }
 	#navigation { width: 90%; margin: 0 5%; }
 }
 
-@media screen and (max-width: 805px) {
+@media screen and (max-width: 962px) {
+	#navigation { width: 90%; margin: 0 5%; }
+	
+	/*Impact Slide One*/
+	#impact .slide-one #invested.text-block { width: 24.21875%; /*310 / 1280*/ padding-left: 5.859375%;/*75 / 1280*/ padding-right: 3.90625%;/*50 / 1280*/ font-size: 2.2em; margin-top: 60px; line-height: 1.4; font-weight: normal; }
+	#impact .slide-one #impacting.text-block { width: 25.78125%; /*330 / 1280*/ margin-top: 200px; }
+	#impact .slide-one #impacting.text-block h3 { font-size: 1.4em; line-height: 1.3; }
+	#impact .slide-one #impacting.text-block p { font-size: .6em; }
+	
+}
+
+@media screen and (max-width: 825px) {
 	#navigation { width: 100%; margin: 0; }
 	
 	/*Our Time*/
@@ -539,6 +583,7 @@ li.fin { width: 60px; }
 @media screen and (max-width: 769px) {
 	/*General*/
 	.mobile { display: block; }
+	.desktop { display: none; }
 	.gallery .gmask { height: auto !important; }
 	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
 	.gallery .gmask li { width: 90% !important; float: none; }
@@ -561,6 +606,7 @@ li.fin { width: 60px; }
 	
 	/*Navigation*/
 	#navigation { display: none; }
+	#navigation.fixed { display: none; }
 	
 	/*Navigation Services*/
 	#navigationservices .slide-one img { margin-right: 100%; margin-left: -6%; }
@@ -582,8 +628,12 @@ li.fin { width: 60px; }
 	#navigationservices .slide-five { padding: 0 5% 50px 5%; }
 	
 	/*Program*/
-	#program .slide-one .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; }
+	#program .slide-one .text-block { padding-right: 10%; padding-bottom: 0; padding-left: 0; }
 	#program .slide-one .text-block h1 br{ display: none; }
+	#program .slide-two .text-block { padding-left: 0 !important; padding-right: 10%; padding-bottom: 0; float: none; width: 100%; }
+	#program .slide-one, #program .slide-two, #program .slide-three { padding: 50px 5%; }
+	#program .slide-three #charts { overflow: visible; width: 87%; padding-top: 50px; padding-bottom: 25px; padding-left: 5%; padding-right: 5%; float: none; }
+	#program .slide-three small { width: 100%; line-height: 1.2; text-align: left; font-size: .75em; margin-left: 0; margin-bottom: 25px; margin-right: 0; display: block; float: none; }
 	
 	/*Video*/
 	.video-container { margin: 0 auto; width: 100%; max-width: 100%; padding-bottom: 64%; margin-bottom: 0; float: none; }
