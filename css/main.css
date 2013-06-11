@@ -580,13 +580,13 @@ li.fin { width: 60px; }
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1023px) {
 	/*General*/
 	.mobile { display: block; }
 	.desktop { display: none; }
 	.gallery .gmask { height: auto !important; }
 	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
-	.gallery .gmask li { width: 90% !important; float: none; }
+	.gallery .gmask li { width: 90% !important; float: none; text-align: center; }
 	.pagination-wrap { display: none !important; }
 	
 	/*Misson*/
