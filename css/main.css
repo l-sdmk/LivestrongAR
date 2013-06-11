@@ -241,11 +241,11 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 
 /*dougs letter slides*/
 #dougs-letter { position: relative; }
-#dougs-letter .gallery { min-height: 577px; }
+#dougs-letter .slide-one, #dougs-letter .slide-two, #dougs-letter .slide-three { height: 575px; }
 #doug-portrait{ width: 30.9375%; height: 474px; /*396 / 1280*/ position: absolute; top: 10%; z-index: 100; display: block; background: url(../img/doug-portrait.jpg) no-repeat 0 0; }
 #dougs-letter .yellow-overlay { margin-left: 32.265625%;/**/ width: 67.734375%;/**/ margin-top: 15px; }
 #dougs-letter .stretch { height: 97.4093264%; }
-#dougs-letter .text-block { margin-left: 40.546875%; /*519 / 1280*/ padding-right: 32.03125%; /*410 / 1280*/ padding-top: 56px; padding-bottom: 66px; }
+#dougs-letter .text-block { margin-left: 40.546875%; /*519 / 1280*/ width: 470px; padding-top: 56px; padding-bottom: 66px; }
 #dougs-letter .slide-one .text-block .yellow-overlay { padding-left: 4.296875%; /*55 / 1280*/; padding-right: 24.296875%; /*311 / 1280*/ padding-top: 8em;}
 
 /*navigation*/
@@ -266,11 +266,11 @@ li.fin { width: 60px; }
 #navigationservices { background: #000; }
 #navigationservices .gallery { min-height: 425px; background: #000; }
 #navigationservices .slide-one { background: #000; color: #fff;  }
-#navigationservices .slide-one .text-block { width: 26.40625%; /*338 / 1280*/  /*423 / 1280*/ float: left; }
+#navigationservices .slide-one .text-block { width: 338px; /*338 / 1280*/  /*423 / 1280*/ float: left; }
 #navigationservices .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 100%;}
 #navigationservices .slide-one h1 { font-size: 1.2em; line-height: 1.3; }
 #navigationservices ul.normal li { font-size: .8275em; }
-#navigationservices .slide-one, #navigationservices .slide-two,  #navigationservices .slide-three,  #navigationservices .slide-four, #navigationservices .slide-five { padding-top: 100px; padding-bottom: 100px; }
+#navigationservices .slide-one, #navigationservices .slide-two,  #navigationservices .slide-three,  #navigationservices .slide-four, #navigationservices .slide-five { padding-top: 100px; height: 475px; }
 #navigationservices .slide-two h3 { font-size: .8275em; line-height: 1.3; font-weight: normal; width: 13.828125%; /*177 / 1280*/ float: left; text-align: left; position: absolute; bottom: 0; left: 76.953125%;/*54.84375% + 20.234375% + 1.875%*/ }
 .info-graphic { width: 18.359375%; /*235 / 1280*/ float: left; text-transform: uppercase; margin-right: 8.90625%; /*114 / 1280*/ }
 .info-graphic img { max-width: 100%; margin-bottom: 25px;}
@@ -284,10 +284,13 @@ li.fin { width: 60px; }
 /*program slides*/
 #program { background: url('../img/program-bg.jpg') 0 0 no-repeat; background-size: cover; min-height: 581px; }
 #program .pale-yellow-overlay { width: 100%; height: 100%; }
-#program .slide-one .text-block { padding-left: 5.46875%;/*70 / 1280*/ padding-right: 60.546875%;/*775 / 1280*/ }
-#program .slide-one, #program .slide-two,  #program .slide-three { padding-top: 100px; padding-bottom: 100px; }
-#program .slide-two .text-block { width: 24.609375%; /*315 / 1280*/ margin-right: 4.6875%; /*60 / 1280*/ }
+#program .slide-one .text-block { padding-left: 5.46875%;/*70 / 1280*/ /* padding-right: 60.546875%;775 / 1280*/ width: 450px; }
+#program .slide-one, #program .slide-two,  #program .slide-three { padding-top: 100px; height: 575px; }
+#program .slide-two .text-block { width: 290px; /* 24.609375% 315 / 1280*/ margin-right: 4.6875%; /*60 / 1280*/ }
+#program .slide-two .center-content { margin: 0 auto; width: 960px; }
+#program .slide-three { text-align: center; }
 #program .slide-three #charts { overflow: visible; width: 50%; padding-top: 50px; padding-bottom: 25px; padding-left: 5%; padding-right: 5%; }
+#program .slide-three .mobile-chart { display: none; }
 #program .slide-three small { width: 14.0625%; /*180 / 1280*/ line-height: 1.2; text-align: left; font-size: .75em; margin-left: 5.46875%; margin-right: 5.46875%; /*70 / 1280*/ display: block; }
 
 /*impact slides*/
@@ -351,7 +354,7 @@ li.fin { width: 60px; }
 
 
 /* pagination */
-.pagination-wrap { width: 100%; text-align: center; position: absolute; bottom: 25px; }
+.pagination-wrap { width: 100%; text-align: center; position: absolute; bottom: 5px; }
 
 .gallery .pagination{
 	left:0;
@@ -586,8 +589,9 @@ li.fin { width: 60px; }
 	.desktop { display: none; }
 	.gallery .gmask { height: auto !important; }
 	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
-	.gallery .gmask li { width: 90% !important; float: none; text-align: center; }
+	.gallery .gmask li { width: 90% !important; float: none; text-align: center; height: auto !important; }
 	.pagination-wrap { display: none !important; }
+	.center-content { width: auto !important; }
 	
 	/*Misson*/
 	#mission img.mission { max-width: 90%; }
@@ -600,7 +604,7 @@ li.fin { width: 60px; }
 	
 	/*Dougs Letter*/
 	#doug-portrait { display: none; }
-	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; }
+	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%; }
 	#dougs-letter .slide-two .text-block, #dougs-letter .slide-three .text-block { padding-top: 0; }
 	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
 	
@@ -628,7 +632,7 @@ li.fin { width: 60px; }
 	#navigationservices .slide-five { padding: 0 5% 50px 5%; }
 	
 	/*Program*/
-	#program .slide-one .text-block { padding-right: 10%; padding-bottom: 0; padding-left: 0; }
+	#program .slide-one .text-block { padding-right: 10%; padding-bottom: 0; padding-left: 0; width: 100%; }
 	#program .slide-one .text-block h1 br{ display: none; }
 	#program .slide-two .text-block { padding-left: 0 !important; padding-right: 10%; padding-bottom: 0; float: none; width: 100%; }
 	#program .slide-one, #program .slide-two, #program .slide-three { padding: 50px 5%; }
@@ -640,6 +644,11 @@ li.fin { width: 60px; }
 	.video-thumb { margin: 0 auto; float: none; margin-bottom: 0; }	
 	
 	
+}
+
+@media screen and (max-width: 630px) {
+ 	#program .slide-three .chart { display: none; }
+	#program .slide-three .mobile-chart { display: block; }
 }
 
 @media print,
