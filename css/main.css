@@ -269,7 +269,7 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
  }
 
 
-+/*Annual Report*/
+/*Annual Report*/
 #our-time { background: white; height: 475px; padding-top: 75px; }
 #our-time img { float: left; margin-right: 75px; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
 #our-time .text-block { width: 335px; /*330 / 1280*/ float: left; }
