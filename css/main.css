@@ -226,12 +226,49 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 .stretch {position: absolute; height: 100%;}
 
 /*Mission*/
-#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; }
-#mission .yellow-overlay { opacity: .9; width: 100%; height: 100%; margin-top: -8.1658291%; /*65 / 796*/ }
-#mission .relative { padding-top: 32.160804%; /*256 / 796*/ }
-#mission .relative img { display: block; margin: 0 auto; max-width: 100%; }
-#mission .mission { padding-bottom: 16.959799%; /*135 / 796*/ }
-#mission .lsf-logo { padding-bottom: 20.728643%; /*165 / 796*/ }
+#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; height: 100%; width: 100%; min-height: 580px; }
+#mission .yellow-overlay { height: 96%; opacity: 0.9; width: 100%; /*65 / 796*/ }
+#mission .relative { left: 10%; position: absolute; right: 10%; top: 30%; /*256 / 796*/ }
+#mission .relative img { display: block; margin: 0 auto; }
+#mission .mission {  /*135 / 796*/ }
+#mission .lsf-logo {  display: block; width: 223px; height: auto; position: relative; left: -50%; /*165 / 796*/ }
+
+/*Scroll Arrow*/
+
+#scroll-button {
+	z-index: 10;
+	position: absolute;
+	left: 49%;
+	bottom: 10%;
+	text-align: center;
+}
+
+#scroll-button span {
+	margin-top: 3px;
+	font-size: 12px;
+}
+
+#mission .white-circle { 
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	background: #fff; 
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;     /* Opera/IE 8+ */
+	padding-top: 14px;
+	margin: auto;
+	text-align: center;
+	}
+#mission .black-triangle { 
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 8px 9px 0 9px;
+	border-color: #000000 transparent transparent transparent;
+	margin: auto;
+	vertical-align: middle;
+ }
 
 /*Our Time*/
 #our-time { background: white; }
@@ -622,8 +659,9 @@ li.fin { width: 60px; }
 
 	
 	/*Misson*/
+	#mission { min-height: 310px; }
 	#mission img.mission { max-width: 90%; }
-	#mission .lsf-logo { width: 40%; }
+	#mission .lsf-logo { width: 120px; height: auto; }
 	
 	/*Our Time*/
 	#our-time { padding: 0 5% 0 10%; }
