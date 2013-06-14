@@ -272,9 +272,9 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 
 
 /*Our Time*/
-#our-time { background: white; }
+#our-time { background: white; padding-top: 50px; }
 #our-time img { float: left; margin-right: 4.296875%; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
-#our-time .text-block { /*margin-right: 17.96875%; 230 / 1280*/ width: 25.78125%; /*330 / 1280*/ padding: 50px 0; float: left; }
+#our-time .text-block { /*margin-right: 17.96875%; 230 / 1280*/ width: 25.78125%; /*330 / 1280*/ float: left; padding-bottom: 50px; }
 #our-time h6 { font-size: 1.3em; }
 
 /*dougs letter slides*/
@@ -667,13 +667,14 @@ li.fin { width: 60px; }
 	
 	/*Our Time*/
 	#our-time { padding: 0 5% 0 10%; }
-	#our-time img { max-width: 100%; padding-bottom: 0; margin-left: -12%; }
+	#our-time img { max-width: 100%; padding-bottom: 50px; padding-top: 50px; margin-left: -12%; }
 	#our-time .text-block { width: 100%; }
 	
 	/*Dougs Letter*/
 	#doug-portrait { display: none; }
 	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%; }
 	#dougs-letter .slide-two .text-block, #dougs-letter .slide-three .text-block { padding-top: 0; }
+	#dougs-letter .slide-two, #dougs-letter .slide-three { display: none; }
 	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
 	
 	/*Navigation*/
