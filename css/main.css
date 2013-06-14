@@ -270,6 +270,7 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 	vertical-align: middle;
  }
 
+
 /*Our Time*/
 #our-time { background: white; }
 #our-time img { float: left; margin-right: 4.296875%; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
