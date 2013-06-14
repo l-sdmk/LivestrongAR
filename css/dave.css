@@ -1,6 +1,13 @@
 
+.lsf-logo { position: relative; left: -50%; }
+
+#mission { position: fixed; width: 100%; }
+
 #body-wrap {
-	margin-top: 100%;
-	position: relative;
+
+	position: absolute;
+	top: 600px;
+	width: 100%;
+	overflow: hidden;
 	z-index: 100;
 }
