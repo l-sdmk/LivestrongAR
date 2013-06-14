@@ -226,17 +226,16 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 .stretch {position: absolute; height: 100%;}
 
 /*Mission*/
-#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; }
-#mission .yellow-overlay { opacity: .9; width: 100%; height: 100%; margin-top: -8.1658291%; /*65 / 796*/ }
-#mission .relative { padding-top: 32.160804%; /*256 / 796*/ }
+#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; height: 607px; }
+#mission .yellow-overlay { opacity: .9; width: 100%; height: 100%; margin-top: -30px; }
+#mission .relative { padding-top: 182px; /*256 / 796*/ }
 #mission .relative img { display: block; margin: 0 auto; max-width: 100%; }
-#mission .mission { padding-bottom: 16.959799%; /*135 / 796*/ }
-#mission .lsf-logo { padding-bottom: 20.728643%; /*165 / 796*/ }
+#mission .mission { padding-bottom: 138px; /*135 / 796*/ }
 
-/*Our Time*/
-#our-time { background: white; }
-#our-time img { float: left; margin-right: 4.296875%; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
-#our-time .text-block { /*margin-right: 17.96875%; 230 / 1280*/ width: 25.78125%; /*330 / 1280*/ padding: 50px 0; float: left; }
+/*Annual Report*/
+#our-time { background: white; height: 475px; padding-top: 75px; }
+#our-time img { float: left; margin-right: 75px; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
+#our-time .text-block { width: 335px; /*330 / 1280*/ float: left; }
 #our-time h6 { font-size: 1.3em; }
 
 /*dougs letter slides*/
@@ -249,8 +248,8 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 #dougs-letter .slide-one .text-block .yellow-overlay { padding-left: 4.296875%; /*55 / 1280*/; padding-right: 24.296875%; /*311 / 1280*/ padding-top: 8em;}
 
 /*navigation*/
-#navigation { min-width: 70.15625%; /*898 / 1280*/ text-align: center; background: url(../img/navigation-bg.png) no-repeat; z-index: 1000; position: absolute; padding: 10px 0 15px 0; margin: 0 14.921875%; background-size: 100%;}
-#navigation.fixed { display: block; position: fixed !important; top: 0 !important; }
+#navigation { min-width: 70.15625%; /*898 / 1280*/ text-align: center; background: url(../img/navigation-bg.png) no-repeat; z-index: 1000; position: absolute; top: -50px; padding: 10px 0 15px 0; margin: 0 14.921875%; background-size: 100%; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
+#navigation.fixed { display: block; position: fixed !important; top: 0 !important; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out;  }
 #navigation li { display: inline-block; padding-right: 30px; }
 #navigation a { color: #000; font-family: MrEavesSanOTReg; font-size: 12px;  }
 #navigation a:hover, #navigation .selected a, #navigation .selected a:hover { color: #ffd204; font-family: MrEavesSanOTBold; text-decoration: none; font-size: 12åpx; letter-spacing: 1; }
@@ -266,9 +265,9 @@ li.fin { width: 60px; }
 #navigationservices { background: #000; }
 #navigationservices .gallery { min-height: 425px; background: #000; }
 #navigationservices .slide-one { background: #000; color: #fff;  }
-#navigationservices .slide-one .text-block { width: 338px; /*338 / 1280*/  /*423 / 1280*/ float: left; }
+#navigationservices .slide-one .text-block { width: 380px; /*338 / 1280*/  /*423 / 1280*/ float: left; }
 #navigationservices .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 100%;}
-#navigationservices .slide-one h1 { font-size: 1.2em; line-height: 1.3; }
+#navigationservices .slide-one h1 { font-size: 1.5em; line-height: 1.3; }
 #navigationservices ul.normal li { font-size: .8275em; }
 #navigationservices .slide-one, #navigationservices .slide-two,  #navigationservices .slide-three,  #navigationservices .slide-four, #navigationservices .slide-five { padding-top: 100px; height: 475px; }
 #navigationservices .slide-two h3 { font-size: .8275em; line-height: 1.3; font-weight: normal; width: 13.828125%; /*177 / 1280*/ float: left; text-align: left; position: absolute; bottom: 0; left: 76.953125%;/*54.84375% + 20.234375% + 1.875%*/ }
@@ -600,40 +599,30 @@ li.fin { width: 60px; }
 	#navigation { width: 90%; margin: 0 5%; }
 }
 
-@media screen and (max-width: 825px) {
-	#navigation { width: 100%; margin: 0; }
-	
-	/*Our Time*/
-	#our-time { padding: 0 5% 0 10%; }
-	#our-time img { max-width: 100%; padding-bottom: 0; margin-left: -12%; }
-	#our-time .text-block { width: 100%; }
-}
-
-
 @media screen and (max-width: 1023px) {
 	/*General*/
 	.mobile { display: block; }
 	.desktop { display: none; }
 	.gallery .gmask { height: auto !important; }
-	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
-	.gallery .gmask li { width: 90% !important; float: none; text-align: center; height: auto !important; }
+	.gallery .gmask ul { width: 100% !important; margin-left: 0 !important; }
+	.gallery .gmask ul li { width: 90% !important; text-align: center; height: auto !important; }
 	.pagination-wrap { display: none !important; }
 	.center-content { width: auto !important; }
 
 	
 	/*Misson*/
 	#mission img.mission { max-width: 90%; }
-	#mission .lsf-logo { width: 40%; }
+	
 	
 	/*Our Time*/
-	#our-time { padding: 0 5% 0 10%; }
-	#our-time img { max-width: 100%; padding-bottom: 0; margin-left: -12%; }
-	#our-time .text-block { width: 100%; }
+	#our-time { padding: 50px 5% 50px 10%; height: auto; }
+	#our-time img { max-width: 100%; padding-bottom: 25px; margin-left: -12%; }
 	
 	/*Dougs Letter*/
 	#doug-portrait { display: none; }
-	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%; }
+	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%;}
 	#dougs-letter .slide-two .text-block, #dougs-letter .slide-three .text-block { padding-top: 0; }
+	#dougs-letter .slide-two, #dougs-letter .slide-three { display: none; }
 	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
 	
 	/*Navigation*/
@@ -683,6 +672,10 @@ li.fin { width: 60px; }
 	.video-thumb { margin: 0 auto; float: none; margin-bottom: 0; }	
 	
 	
+}
+
+@media screen and (max-width: 884px) {
+ 	#our-time .text-block { width: 100%;}
 }
 
 @media screen and (max-width: 630px) {
