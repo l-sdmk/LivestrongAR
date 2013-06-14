@@ -226,12 +226,10 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 .stretch {position: absolute; height: 100%;}
 
 /*Mission*/
-#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; height: 100%; width: 100%; min-height: 580px; }
-#mission .yellow-overlay { height: 96%; opacity: 0.9; width: 100%; /*65 / 796*/ }
-#mission .relative { left: 10%; position: absolute; right: 10%; top: 30%; /*256 / 796*/ }
-#mission .relative img { display: block; margin: 0 auto; }
-#mission .mission {  /*135 / 796*/ }
-#mission .lsf-logo {  display: block; width: 223px; height: auto; position: relative; left: -50%; /*165 / 796*/ }
+#mission { background: url('../img/mission-bg.jpg') no-repeat; background-size: cover; height: 607px; }
+#mission .yellow-overlay { opacity: .9; width: 100%; height: 100%; margin-top: -30px; }
+#mission .relative { padding-top: 182px; /*256 / 796*/ }
+#mission .relative img { display: block; margin: 0 auto; max-width: 100%; }
 
 /*Scroll Arrow*/
 
@@ -271,10 +269,10 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
  }
 
 
-/*Our Time*/
-#our-time { background: white; padding-top: 50px; }
-#our-time img { float: left; margin-right: 4.296875%; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
-#our-time .text-block { /*margin-right: 17.96875%; 230 / 1280*/ width: 25.78125%; /*330 / 1280*/ float: left; padding-bottom: 50px; }
++/*Annual Report*/
+#our-time { background: white; height: 475px; padding-top: 75px; }
+#our-time img { float: left; margin-right: 75px; /*55 / 1280*/  padding-bottom: 50px; max-width: 100%; }
+#our-time .text-block { width: 335px; /*330 / 1280*/ float: left; }
 #our-time h6 { font-size: 1.3em; }
 
 /*dougs letter slides*/
@@ -287,8 +285,8 @@ p{ margin-bottom: 2em; font-size: 1em; line-height: 1.6;}
 #dougs-letter .slide-one .text-block .yellow-overlay { padding-left: 4.296875%; /*55 / 1280*/; padding-right: 24.296875%; /*311 / 1280*/ padding-top: 8em;}
 
 /*navigation*/
-#navigation { min-width: 70.15625%; /*898 / 1280*/ text-align: center; background: url(../img/navigation-bg.png) no-repeat; z-index: 1000; position: absolute; padding: 10px 0 15px 0; margin: 0 14.921875%; background-size: 100%;}
-#navigation.fixed { display: block; position: fixed !important; top: 0 !important; }
+#navigation { min-width: 70.15625%; /*898 / 1280*/ text-align: center; background: url(../img/navigation-bg.png) no-repeat; z-index: 1000; position: fixed; top: -50px; padding: 10px 0 15px 0; margin: 0 14.921875%; background-size: 100%; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+#navigation.fixed { display: block; position: fixed !important; top: 0 !important; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out;  }
 #navigation li { display: inline-block; padding-right: 30px; }
 #navigation a { color: #000; font-family: MrEavesSanOTReg; font-size: 12px;  }
 #navigation a:hover, #navigation .selected a, #navigation .selected a:hover { color: #ffd204; font-family: MrEavesSanOTBold; text-decoration: none; font-size: 12åpx; letter-spacing: 1; }
@@ -654,8 +652,8 @@ li.fin { width: 60px; }
 	.mobile { display: block; }
 	.desktop { display: none; }
 	.gallery .gmask { height: auto !important; }
-	.gallery .gmask ul { width: auto !important; margin-left: 0 !important; }
-	.gallery .gmask li { width: 90% !important; float: none; text-align: center; height: auto !important; }
+	.gallery .gmask ul { width: 100% !important; margin-left: 0 !important; }
+ 	.gallery .gmask ul li { width: 90% !important; text-align: center; height: auto !important; }
 	.pagination-wrap { display: none !important; }
 	.center-content { width: auto !important; }
 
@@ -666,13 +664,12 @@ li.fin { width: 60px; }
 	#mission .lsf-logo { width: 120px; height: auto; }
 	
 	/*Our Time*/
-	#our-time { padding: 0 5% 0 10%; }
-	#our-time img { max-width: 100%; padding-bottom: 50px; padding-top: 50px; margin-left: -12%; }
-	#our-time .text-block { width: 100%; }
+	#our-time { padding: 50px 5% 50px 10%; height: auto; }
+	#our-time img { max-width: 100%; padding-bottom: 25px; margin-left: -12%; }
 	
 	/*Dougs Letter*/
 	#doug-portrait { display: none; }
-	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%; }
+	#dougs-letter .text-block { margin-left: 5%; padding-right: 10%; padding-bottom: 0; width: 100%;}
 	#dougs-letter .slide-two .text-block, #dougs-letter .slide-three .text-block { padding-top: 0; }
 	#dougs-letter .slide-two, #dougs-letter .slide-three { display: none; }
 	#dougs-letter .yellow-overlay { margin-left: 0; width: 100%; }
@@ -725,6 +722,11 @@ li.fin { width: 60px; }
 	
 	
 }
+
+@media screen and (max-width: 884px) {
+   #our-time .text-block { width: 100%;}
+}
+
 
 @media screen and (max-width: 630px) {
  	#program .slide-three .chart { display: none; }
