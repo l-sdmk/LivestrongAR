@@ -3,6 +3,15 @@
 
 #mission { position: fixed; width: 100%; }
 
+.logo-n-scroll {
+	position: absolute; left: 50%; bottom: 23%; z-index: 20;
+}
+
+#scroll-button {
+	bottom: 25%;
+	opacity: 0.0;
+}
+
 #body-wrap {
 
 	position: absolute;
