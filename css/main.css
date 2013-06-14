@@ -266,6 +266,7 @@ li.fin { width: 60px; }
 #navigationservices .gallery { min-height: 425px; background: #000; }
 #navigationservices .slide-one { background: #000; color: #fff;  }
 #navigationservices .slide-one .text-block { width: 380px; /*338 / 1280*/  /*423 / 1280*/ float: left; }
+#navigationservices .slide-one .text-block p { font-size: .9em; }
 #navigationservices .slide-one img { float: left; margin-top: -17px; margin-bottom: 50px; margin-right: 8.203125%; /*105 / 1280*/; max-width: 100%;}
 #navigationservices .slide-one h1 { font-size: 1.5em; line-height: 1.3; }
 #navigationservices ul.normal li { font-size: .8275em; }
