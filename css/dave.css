@@ -36,7 +36,7 @@
 
 
 
-#navigationservices .slide-four h3, #sarahs-video-wrap h3 {
+#navigationservices .slide-four h3, #sarahs-video-wrap h3, #brians-video-wrap h3 {
 bottom: 0;
 left: 0;
 display: inline-block;,
@@ -51,6 +51,13 @@ vertical-align: bottom;
 float: none;
 }
 
+#sarahs-video-wrap h3 {
+	width: 22.828%;
+}
+
+#brians-video-wrap h3 {
+	width: 25.828%;
+}
 
 
 #navigationservices .slide-two .text-block {
@@ -64,14 +71,14 @@ float: none;
 	width: 33.844%;
 }
 
-#iram-video img, #sarah-video img, #melissa-video img {
+#iram-video img, #sarah-video img, #melissa-video img, #brian-video img {
 border: 8px solid #7d7d7d;	
 width: 74%; max-width: 679px;	
 }
 
 #melissa-video img { width: 100%; }
 
-#sarahs-video-wrap {
+#sarahs-video-wrap, #brians-video-wrap {
 	position: absolute;
 	top: 17%;
 	left: 0;
@@ -97,8 +104,20 @@ float: none;
 	margin: auto;
 }
 
+#brians-video-wrap .video-wrap {
+	width: 56%;
+	margin: auto;
+}
+
 #sarahs-video-wrap .video-container {
 	background-image: url(../img/sarah-thumb.jpg);
+	background-position: 0 0;
+	background-repeat: none;
+	background-size: 100% auto;
+}
+
+#brians-video-wrap .video-container {
+	background-image: url(../img/brian-thumb.jpg);
 	background-position: 0 0;
 	background-repeat: none;
 	background-size: 100% auto;
