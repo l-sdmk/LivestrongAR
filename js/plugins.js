@@ -103,13 +103,13 @@
 					tab:oldTab,
 					complete: function() {
 						// show current tab
-						resizeHolder();
+						//resizeHolder();
 						contentTabsEffect[options.effect].show({
 							speed: options.animSpeed,
 							tab:newTab,
 							complete: function() {
 								animating = false;
-								resizeHolder(true);
+								//resizeHolder(true);
 								autoRotate();
 							}
 						});
@@ -128,8 +128,8 @@
 				}
 			}
 			if(options.autoHeight) {
-				resizeHolder(true);
-				$(window).bind('resize orientationchange', resizeHolder);
+			//	resizeHolder(true);
+			//	$(window).bind('resize orientationchange', resizeHolder);
 			}
 
 			// autorotation handling
