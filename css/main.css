@@ -203,6 +203,7 @@ select{
 .metrolitetwo { font-family: MetroLite, Futura, "Trebuchet MS", Arial, sans-serif; margin-bottom: 1em; }
 .sentinelblackitalic { font-family: 'SentinelBlackItalic'; }
 .sentinel { font-family: 'SentinelLight';  }
+small { line-height: 1; text-align: left; font-size: .75em; }
 
 h1{ font-size: 4.75em; text-transform: uppercase; line-height: 1;  margin-bottom: 0.61842105em; }
 h5{ font-size: 1.25em; text-transform: uppercase; font-weight: bold; }
@@ -311,6 +312,7 @@ li.fin { width: 60px; }
 #navigationservices .slide-one h1 { font-size: 1.5em; line-height: 1.3; }
 #navigationservices ul.normal li { font-size: .8275em; }
 #navigationservices .slide-one, #navigationservices .slide-two,  #navigationservices .slide-three,  #navigationservices .slide-four, #navigationservices .slide-five { padding-top: 100px; height: 525px; }
+
 #navigationservices .slide-two .text-block { width: 26.5625%; /*340 / 1280*/ padding-left: 5.46875%; /*70 / 1280*/ padding-right: 5.46875%; /*70 / 1280*/ }
 #navigationservices .slide-two .text-block p {font-size: .8725em;}
 #navigationservices .slide-two .text-block ul {font-size: 1.5em; line-height: 2;}
@@ -320,6 +322,7 @@ li.fin { width: 60px; }
 .info-graphic img { max-width: 100%; margin-bottom: 25px;}
 .info-graphic.money { margin-left: 13.40625%; /*171.6 / 1280*/ }
 .info-graphic.clients { margin-right: 0; }
+
 #navigationservices .slide-four h2 { width: 17.578125%; /*225 / 1280*/ text-align: left; float: left; margin-left: 5.46875%;/*70 / 1280*/ margin-right: 3.90625%; padding-top: 7.103044%%;}
 #navigationservices .slide-four .video-thumb, #navigationservices .slide-four .video-container { margin-left: 0; }
 #navigationservices .slide-four h3 { font-size: .8275em; line-height: 1.3; font-weight: normal; width: 13.828125%; /*177 / 1280*/ position: absolute; bottom: 0; left: 83.671875%;/*17.578125%; + 5.46875% + 3.90625% + 54.84375% + 1.875%*/ text-align: left; }
@@ -440,8 +443,39 @@ li.fin { width: 60px; }
 #global .slide-four .text-block { width: 45.703125%; /*585 / 1280*/ padding-top: 30px; }
 #global .slide-four .text-block p { font-size: .8725em; margin-bottom: 15px; }
 
+/* research */
+#research { background-color: #fff; }
+#research .slide-one { height: 575px; }
+#research .slide-one h1 { font-size: 1.5em; line-height: 1.3; }
+#research .slide-one .text-block { width: 300px; padding-left: 145px; padding-top: 160px; }
+#research .slide-one .text-block p { font-size: .8725em; margin-bottom: 15px; }
 
+#research .slide-two { height: 575px; }
+#research .slide-two h1 { font-size: 1.5em; line-height: 1.3; }
+#research .slide-two .text-block { width: 415px; padding-left: 145px; padding-top: 115px; }
+#research .slide-two .text-block p { font-size: .8725em; margin-bottom: 15px; }
 
+#research .slide-three { background: url('../img/plane.jpg') 0 0 no-repeat; background-size: cover; height: 465px; padding-top: 110px; }
+#research .slide-three .text-block { width: 370px; padding-left: 70px; padding-right: 8.984375%; /*115 / 1280*/  }
+#research .slide-three .text-block h2 { padding-left: 0; font-size: 1.4em }
+#research .slide-three .text-block p { line-height: 1.2; margin-bottom: 15px; font-weight: bold; font-size: .8725em; }
+#research .slide-three h2 { width: 410px; font-size: 1.6em; padding-top: 15px; line-height: 1.5; font-weight: normal; }
+#research .slide-three h2 img { padding-top: 15px; }
+
+/*Financials*/
+#financials { background-color: #000; }
+#financials .slide-one { padding-top: 100px; height: 475px; }
+#financials .slide-one img { margin-right: 4.6875%; /*60 / 1280*/ }
+#financials .slide-one h4 { width: 61.578125%; /*865 / 1280*/ font-size: .8em; line-height: 1.3; margin-bottom: 25px; }
+#financials .slide-one table { width: 310px; text-align: left; margin-right: 4.6875%; /*60 / 1280*/ }
+#financials .slide-one table#liabilities { padding-right: 0; }
+#financials .slide-one table th { text-transform: uppercase; font-size: 1.3em; padding-bottom: 5px; }
+#financials .slide-one table td { font-family: MrEavesSanOTReg; font-size :.875em; line-height: 1.5; text-transform: uppercase; }
+#financials .slide-one table td.right { text-align: right; }
+
+#financials .slide-two { height: 475px; }
+
+#financials .slide-three { height: 475px; }
 
 /* gallery */
 .gallery {
@@ -814,9 +848,6 @@ li.fin { width: 60px; }
 	#global .slide-two, #program .slide-three, #program .slide-four { padding: 50px 5%; }
 	#global .slide-four img { padding-right: 0; padding-left: 0; }
 	#global .slide-four .text-block { width: auto; }
-	
-	
-	
 }
 
 @media screen and (max-width: 884px) {
