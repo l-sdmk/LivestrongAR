@@ -75,12 +75,12 @@ float: none;
 	max-width: 679px;
 }
 
-#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img {
+#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img, #devon-video img {
 border: 8px solid #7d7d7d;	
 width: 74%; max-width: 679px;	
 }
 
-#sarah-video img, #brian-video img, #tara-video img, #melissa-video img  {
+#sarah-video img, #brian-video img, #tara-video img, #melissa-video img, #devon-video img  {
 	width: 100%;
 }
 
@@ -118,6 +118,28 @@ float: none;
 #taras-video-wrap .video-wrap {
 	width: auto;
 }
+#devon-video-wrap {
+	display: inline-block;
+}
+
+#devon-video-wrap .video-wrap {
+	width: auto;
+}
+
+#impact .slide-two h3 {
+width: 17%;
+font-size: .8275em;
+line-height: 1.3;
+font-weight: normal;
+text-align: left;
+position:relative;
+display: inline-block;
+vertical-align: bottom;
+padding-left: 5%;
+padding-right: 6.9%;
+margin-bottom: 20px;
+float: none;
+}
 
 #sarahs-video-wrap .video-container {
 	background-image: url(../img/sarah-thumb.jpg);
@@ -139,6 +161,10 @@ width: 100%;
 
 .video-wrap {
 	display: inline-block; text-align: left; vertical-align: middle; width: 71.649%;
+}
+
+.video-wrap img {
+		max-width: 679px;
 }
 
 
@@ -164,14 +190,15 @@ width: 100%;
 
 @media screen and (max-width: 1023px) {
 	
-#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img { width:100%; }
+#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img, #devon-video img { width:100%; }
 #navigationservices .slide-four h2 { width: 95%; }
 #navigationservices .slide-four h3, #sarahs-video-wrap h3, #brians-video-wrap h3 { width: 100%; }
 
 	.video-wrap {
 	width: 80% !important;
-	margin: auto;
+	margin: auto !important;
 	padding: 0;
+	text-align: center;
 	}
 	.close-white, .close-black  { display: none; }
 	
@@ -186,6 +213,14 @@ width: 100%;
 	
 	#watch-brians-video { display: none; }
 	#isMobile { display: block; }
+
+#impact .slide-two h3 {
+	width: 100%;
+	margin: 0;
+	padding: 30px 0 30px 0;
+	border-top: 1px solid black;
+}
+
 
 }
 

@@ -131,13 +131,12 @@
 								<p><a class="sentinelblackitalic yellow" style="text-decoration: underline;" href="" id="watch-sarahs-video">Watch Sarah's Video</a></p>
 							</div>
 							</span>
-							<div id="sarahs-video-wrap">
-								<div class="video-wrap">
-									<a href="#" class="" id="sarah-video"><img src="img/sarah-thumb.jpg" alt="" /></a>
+								<div id="sarahs-video-wrap">
+									<div class="video-wrap">
+									<a href="#" id="sarah-video"><img src="img/sarah-thumb.jpg" class="video-thumb" alt="" /></a>
 									<div class="video-container" style="display: none;"></div>
 									<h3 class="sentinelblackitalic yellow"><span class="mreavessansbold">SARAH</span><br /><span class="mreavessansreg">two-time breast cancer survivor </span><br /><br />“I was afraid cancer meant I couldn’t have children.”</h3>
 								</div>
-							</div>
 			        	</li>
 
 				        <li class="slide-two black-overlay">
@@ -341,9 +340,13 @@
 				        </li>
 						<li class="slide-two">
 							<div class="relative">
-								<h3 class="sentinelblackitalic fleft"><span class="mreavessansbold caps">Devon</span><br /><span class="mreavessansreg">Programs at the Foundation</span><br /><br />“Cancer happens to the whole person... It happens to your spirit, emotionally. It happens to your mind, mentally. It happens to your families and communities, socially. There have to be ways to help the whole person heal, not just the physical. And that’s what our programs can do.”</h3>
-								<a href="#" class="video-thumb fleft" id="devon-video"><img src="img/devon-thumb.jpg" style="max-width: 100%;" alt="" /></a>
-								<div class="video-container fleft"></div>
+								<h3 class="sentinelblackitalic"><span class="mreavessansbold caps">Devon</span><br /><span class="mreavessansreg">Programs at the Foundation</span><br /><br />“Cancer happens to the whole person... It happens to your spirit, emotionally. It happens to your mind, mentally. It happens to your families and communities, socially. There have to be ways to help the whole person heal, not just the physical. And that’s what our programs can do.”</h3>
+								<div id="devon-video-wrap">
+								<div class="video-wrap">
+									<a href="#" id="devon-video"><img src="img/devon-thumb.jpg" alt="" /></a>
+									<div class="video-container" style="display: none;"></div>
+								</div>
+								</div>
 								<div style="clear: both;"></div>
 							</div>			
 				        </li>
@@ -815,7 +818,7 @@
 				$(this).hide();
 				if (!window.isMobile()) { setTimeout(function() { $('#navigationservices .slide-two .text-block').animate({opacity: 0.3}, 1700); }, 500); }
 				$('#navigationservices .slide-two .video-container').height(videoHeight).width(videoWidth).show();
-			    $('#navigationservices .slide-two .video-container').html('<span id="melissa-close" class="close-white"></span><iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			    $('#navigationservices .slide-two .video-container').html('<div id="melissa-close" class="close-white"></div><iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
 			$('#melissa-close').on('click', function(event) {				
 				$('#navigationservices .slide-two .video-container').html('').hide();
 				$('#melissa-video').show();
@@ -830,13 +833,32 @@
 				$(this).hide();
 				if (!window.isMobile()) { setTimeout(function() { $('#program .slide-two .text-block').animate({opacity: 0.3}, 1700); }, 500); }
 				$('#program .slide-two .video-container').height(videoHeight).width(videoWidth).show();
-			    $('#program .slide-two .video-container').html('<span id="tara-close" class="close-black"></span><iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			    $('#program .slide-two .video-container').html('<div id="tara-close" class="close-black"></div><iframe src="http://www.youtube.com/embed/CZPPk24x3K4?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
 			$('#tara-close').on('click', function(event) {				
 				$('#program .slide-two .video-container').html('').hide();
 				$('#tara-video').show();
 				if (!window.isMobile()) { setTimeout(function() { $('#program .slide-two .text-block').animate({opacity: 1.0}, 1700); }, 500); }
 			});
 			});
+			
+			
+			$('#devon-video').on('click', function(event) {
+				event.preventDefault();
+				var videoHeight = $('#devon-video img').height();
+				var videoWidth = $('#devon-video img').width();
+				$(this).hide();
+				if (!window.isMobile()) { setTimeout(function() { $('#impact .slide-two h3').animate({opacity: 0.3}, 1700); }, 500); }
+				$('#impact .slide-two .video-container').height(videoHeight).width(videoWidth).show();
+			    $('#impact .slide-two .video-container').html('<div id="devon-close" class="close-black"></div><iframe src="http://www.youtube.com/embed/DKUAj6BZoJQ?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			$('#devon-close').on('click', function(event) {				
+				$('#impact .slide-two .video-container').html('').hide();
+				$('#devon-video').show();
+				if (!window.isMobile()) { setTimeout(function() { $('#impact .slide-two h3').animate({opacity: 1.0}, 1700); }, 500); }
+			});
+			});
+			
+			
+			
 			
 			
 			$('#iram-video').on('click', function(event) {
@@ -917,13 +939,7 @@
 			});
 
 			
-			
-			$('#devon-video').on('click', function(event) {
-				event.preventDefault();
-				$(this).hide();
-				$('#impact .slide-two .video-container').show();
-			    $('#impact .slide-two .video-container').html('<iframe src="http://www.youtube.com/embed/DKUAj6BZoJQ?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
-			});
+		
 		</script>
 		
 		<!--Stick Nav on Scroll-->
