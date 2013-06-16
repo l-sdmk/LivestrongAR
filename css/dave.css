@@ -1,4 +1,6 @@
 
+
+
 .lsf-logo { position: relative; left: -50%; }
 
 #mission { position: fixed; width: 100%; }
@@ -13,12 +15,11 @@
 }
 
 #body-wrap {
-
 	position: absolute;
 	top: 600px;
 	width: 100%;
 	overflow: hidden;
-	z-index: 100;
+	z-index: 10;
 	background: #fff;
 }
 
@@ -52,11 +53,16 @@ float: none;
 }
 
 #sarahs-video-wrap h3 {
-	width: 20.828%;
+	width: 23.828%;
 }
 
+#taras-video-wrap .video-wrap {
+	width: auto;
+}
+
+
 #brians-video-wrap h3 {
-	width: 25.828%;
+	width: 20.828%;
 }
 
 
@@ -69,16 +75,14 @@ float: none;
 	max-width: 679px;
 }
 
-#iram-video img, #sarah-video img, #melissa-video img, #brian-video img {
+#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img {
 border: 8px solid #7d7d7d;	
 width: 74%; max-width: 679px;	
 }
 
-#sarah-video img, #brian-video img {
+#sarah-video img, #brian-video img, #tara-video img, #melissa-video img  {
 	width: 100%;
 }
-
-#melissa-video img { width: 100%; }
 
 #sarahs-video-wrap, #brians-video-wrap {
 	position: absolute;
@@ -111,6 +115,10 @@ float: none;
 	margin: auto auto auto 5%;
 }
 
+#taras-video-wrap .video-wrap {
+	width: auto;
+}
+
 #sarahs-video-wrap .video-container {
 	background-image: url(../img/sarah-thumb.jpg);
 	background-position: 0 0;
@@ -130,7 +138,7 @@ width: 100%;
 }
 
 .video-wrap {
-	display: inline-block; text-align: left; vertical-align: middle; width: 71.844%;
+	display: inline-block; text-align: left; vertical-align: middle; width: 71.649%;
 }
 
 
@@ -143,8 +151,73 @@ width: 100%;
 	top: -10px;
 	right: -75px;
 	display: block;
+	cursor: pointer;
+	z-index: 1000000;
 }
 
 .close-black {
-	background-position: 0 -39px;
+	background-position: -37px 0;
 }
+
+#isMobile { display: none; }
+
+
+@media screen and (max-width: 1023px) {
+	
+#iram-video img, #sarah-video img, #melissa-video img, #brian-video img, #tara-video img { width:100%; }
+#navigationservices .slide-four h2 { width: 95%; }
+#navigationservices .slide-four h3, #sarahs-video-wrap h3, #brians-video-wrap h3 { width: 100%; }
+
+	.video-wrap {
+	width: 80% !important;
+	margin: auto;
+	padding: 0;
+	}
+	.close-white, .close-black  { display: none; }
+	
+	#watch-sarahs-video { display: none; }
+	
+	#sarahs-video-wrap, #brians-video-wrap {
+		position: relative;
+		display: block;
+		margin:0;
+		padding:0; 
+	}
+	
+	#watch-brians-video { display: none; }
+	#isMobile { display: block; }
+
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+	#mission {
+	height: 100%;
+	position: relative; 
+	}
+
+	#body-wrap {
+
+		position: relative;
+		top: 0;
+	}
+
+#mission .relative {
+	padding-top: 30%;
+}
+
+#mission .white-circle {
+	width: 20px;
+	height: 20px;
+	padding-top: 9px;
+}
+
+#mission .white-circle .black-triangle {
+	border-width: 4px 6px 0 6px;	
+}
+
+
+}
+
+

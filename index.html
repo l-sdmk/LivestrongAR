@@ -128,7 +128,7 @@
 									possibility of in vitro fertilization and connected Sarah to the LIVESTRONG Foundation, everything changed.</p>
 								<p>Sarah and her husband worked with one of our navigators to help pay for the medications and services for freezing embryos. And when her sister-in-law stepped forward to be a surrogate, their dreams came true. Lilly Dee was born nine months later.</p>
 								<p>Sarah sums it up, "The LIVESTRONG Foundation made what we thought was impossible... possible."</p>
-								<p><a class="sentinelblackitalic yellow" style="text-decoration: underline;" href="" id="watch-savahs-video">Watch Sarah's Video</a></p>
+								<p><a class="sentinelblackitalic yellow" style="text-decoration: underline;" href="" id="watch-sarahs-video">Watch Sarah's Video</a></p>
 							</div>
 							</span>
 							<div id="sarahs-video-wrap">
@@ -186,6 +186,7 @@
 						
 						
 						<li class="slide-four black-overlay">
+							<img class="mobile" style="float: right; margin: -70px -6% 0 0; max-width: 80%;" src="img/sliver-right-yellow.png" alt="">
 							<div class="relative">
 								<h2 class="mreavessansreg white caps">But for us, the proof is always in the people. Never a number, but a name. Never a statistic, but a voice. Introducing Iram and Sarah.</h2>
 								<div class="video-wrap">
@@ -251,7 +252,14 @@
 								<p class="caps mreavessansreg">The power of a grassroots movement that truly harnesses the passion of its advocates should never be underestimated. And when it comes to passionate advocates worldwide, 2012 was a banner year for the LIVE<span class="mreavessansbold">STRONG</span> Foundation.</p>
 								<p>This tremendous generosity allows us to provide all of our free services and resources, like the LIVESTRONG Guidebook, cancer navigation services and LIVESTRONG at School, among many others. Since our inception, we have raised over $500 million dollars for the fight against cancer, and 82% of those funds have gone directly to support our programs and services for survivors.</p>
 							</div>
-							<a href="#"><img id="tara-thumb" class="fleft" src="img/tara.jpg" alt="" /></a>
+						
+							<div id="taras-video-wrap">
+							<div class="video-wrap">
+								<a href="#" class="" id="tara-video"><img src="img/tara.jpg" alt="" /></a>
+								<div class="video-container" style="display: none;"></div>
+							</div>
+							</div>
+							
 							<div style="clear: both;"></div>	
 				        </li>
 						<li class="slide-three">
@@ -685,47 +693,70 @@
 			$('#melissa-video').on('click', function(event) {
 				event.preventDefault();
 				var videoHeight = $('#melissa-video img').height();
+				var videoWidth = $('#melissa-video img').width();
 				$(this).hide();
-				setTimeout(function() { $('#navigationservices .slide-two .text-block').animate({opacity: 0.3}, 1700); }, 500);
-				$('#navigationservices .slide-two .video-container').height(videoHeight).show();
+				if (!window.isMobile()) { setTimeout(function() { $('#navigationservices .slide-two .text-block').animate({opacity: 0.3}, 1700); }, 500); }
+				$('#navigationservices .slide-two .video-container').height(videoHeight).width(videoWidth).show();
 			    $('#navigationservices .slide-two .video-container').html('<span id="melissa-close" class="close-white"></span><iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
-			$('#melissa-close').on('click', function(event) {
+			$('#melissa-close').on('click', function(event) {				
 				$('#navigationservices .slide-two .video-container').html('').hide();
 				$('#melissa-video').show();
-				setTimeout(function() { $('#navigationservices .slide-two .text-block').animate({opacity: 1.0}, 1700); }, 500);
+				if (!window.isMobile()) { setTimeout(function() { $('#navigationservices .slide-two .text-block').animate({opacity: 1.0}, 1700); }, 500); }
 			});
 			});	
+			
+			$('#tara-video').on('click', function(event) {
+				event.preventDefault();
+				var videoHeight = $('#tara-video img').height();
+				var videoWidth = $('#tara-video img').width();
+				$(this).hide();
+				if (!window.isMobile()) { setTimeout(function() { $('#program .slide-two .text-block').animate({opacity: 0.3}, 1700); }, 500); }
+				$('#program .slide-two .video-container').height(videoHeight).width(videoWidth).show();
+			    $('#program .slide-two .video-container').html('<span id="tara-close" class="close-black"></span><iframe src="http://www.youtube.com/embed/LsAMPXe8lrI?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			$('#tara-close').on('click', function(event) {				
+				$('#program .slide-two .video-container').html('').hide();
+				$('#tara-video').show();
+				if (!window.isMobile()) { setTimeout(function() { $('#program .slide-two .text-block').animate({opacity: 1.0}, 1700); }, 500); }
+			});
+			});
 			
 			
 			$('#iram-video').on('click', function(event) {
 				event.preventDefault();
 				var videoHeight = $('#iram-video img').height();
+				var videoWidth = $('#iram-video img').width();
 				$(this).hide();
-				setTimeout(function() { $('#navigationservices .slide-four h2').animate({opacity: 0.3}, 1700); }, 500);
-				$('#navigationservices .slide-four .video-container').height(videoHeight).show();
-			    $('#navigationservices .slide-four .video-container').html('<span id="iram-close" class="close-white"></span><iframe src="http://www.youtube.com/embed/X5cKt9vBeFA?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+				if (!window.isMobile()) { setTimeout(function() { $('#navigationservices .slide-four h2').animate({opacity: 0.3}, 1700); }, 500); }
+				$('#navigationservices .slide-four .video-container').height(videoHeight).width(videoWidth).show();
+			    $('#navigationservices .slide-four .video-container').html('<div id="iram-close" class="close-white"></div><iframe src="http://www.youtube.com/embed/X5cKt9vBeFA?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
 			$('#iram-close').on('click', function(event) {
 				$('#navigationservices .slide-four .video-container').html('').hide();
 				$('#iram-video').show();
-				setTimeout(function() { $('#navigationservices .slide-four h2').animate({opacity: 1.0}, 1700); }, 500);
+			if (!window.isMobile()) {	setTimeout(function() { $('#navigationservices .slide-four h2').animate({opacity: 1.0}, 1700); }, 500); }
 			});
 			});
 			
 			
+			$('#sarah-video').on('click', function(event) {
+				event.preventDefault();
+				var videoHeight = $('#sarah-video img').height();
+				var videoWidth = $('#sarah-video img').width();
+				$(this).hide();
+				$('#navigationservices .slide-one .video-container').height(videoHeight).width(videoWidth).show();
+			    $('#navigationservices .slide-one .video-container').html('<iframe src="http://www.youtube.com/embed/1hPLWtMU1Mg?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			});
 			
 			
 			
-			
-			$('#watch-savahs-video').click(function(event) {
+			$('#watch-sarahs-video').on('click',  function(event) {
 					event.preventDefault();
-					$('#navigationservices .slide-one .dim, #navigationservices .slide-one .dim *').animate({opacity: 0.4}, 700, function() {
+					$.when($('#navigationservices .slide-one .dim, #navigationservices .slide-one .dim *').animate({opacity: 0.4}, 700)).then(function() {
 						$('#sarahs-video-wrap').fadeIn(700, function() {
-			
 							var videoHeight = $('#sarah-video img').height();
 							var videoWidth = $('#sarah-video img').width();
 							$('#sarah-video img').hide();
 							$('#sarahs-video-wrap .video-container').height(videoHeight).width(videoWidth).show();
-						    $('#sarahs-video-wrap .video-container').html('<span id="sarah-close" class="close-white"></span><iframe src="http://www.youtube.com/embed/1hPLWtMU1Mg?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">');
+						    $('#sarahs-video-wrap .video-container').html('<div id="sarah-close" class="close-white"></div><iframe src="http://www.youtube.com/embed/1hPLWtMU1Mg?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="1024" height="768" frameborder="0" allowfullscreen="true">');
 						$('#sarah-close').on('click', function(event) {
 							$('#sarahs-video-wrap').fadeOut(700, function() { 
 								$('#sarahs-video-wrap .video-container').html('');
@@ -737,9 +768,18 @@
 				});
 			});
 			
+			$('#brian-video').on('click', function(event) {
+				event.preventDefault();
+				var videoHeight = $('#brian-video img').height();
+				var videoWidth = $('#brian-video img').width();
+				$(this).hide();
+				$('#navigationservices .slide-five .video-container').height(videoHeight).width(videoWidth).show();
+			    $('#navigationservices .slide-five .video-container').html('<iframe src="http://www.youtube.com/embed/BFOKXBkvHKE?autohide=1&autoplay=1&controls=2&rel=0&showinfo=0&iv_load_policy=3&theme=light" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+			});
+			
 			$('#watch-brians-video').click(function(event) {
 					event.preventDefault();
-					$('#navigationservices .slide-five .dim, #navigationservices .slide-five .dim *').animate({opacity: 0.4}, 700, function() {
+					$.when($('#navigationservices .slide-five .dim, #navigationservices .slide-five .dim *').animate({opacity: 0.4}, 700)).then(function() {
 						$('#brians-video-wrap').fadeIn(700, function() {
 			
 							var videoHeight = $('#brian-video img').height();
@@ -803,6 +843,6 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 		<script type="text/javascript" src="js/dave.js"></script>
-
+		<span id="isMobile"></span>
     </body>
 </html>

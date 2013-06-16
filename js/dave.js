@@ -1,4 +1,9 @@
 
+
+window.isMobile = function() {
+	return ($('#isMobile').css('display') == "block" ? true : false);
+}
+
 // onscroll, fade in and out the mission section
 var missionFader = {
 	state: 0,
@@ -23,10 +28,13 @@ var missionFader = {
 $(document).ready(function() {
 	
 	setTimeout(function() { $('#scroll-button').animate({ bottom: '8%', opacity: 0.5},350, function() { $(this).stop().animate({opacity: 1.0}, 900); }); }, 1000);
-	setInterval(function() { missionFader.ping($(window).scrollTop());}, 700);
 
-	$(window).scroll(function() {
-		missionFader.ping($(window).scrollTop()); // setup mission fader scrolling
-	});
+	if ($('.isMobile').css('display') == "none") {
+		setInterval(function() { missionFader.ping($(window).scrollTop());}, 700);
+    
+		$(window).scroll(function() {
+	        missionFader.ping($(window).scrollTop()); // setup mission fader scrolling
+		});
+	}
 	
 });
