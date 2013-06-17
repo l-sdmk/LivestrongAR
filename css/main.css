@@ -298,8 +298,8 @@ li.prog { width: 56px; }
 li.imp { width: 41px; }
 li.glob { width: 40px; }
 li.res { width: 57px; }
-li.spp { width: 128px; }
 li.fin { width: 60px; }
+li.awa { width: 128px; }
 
 /*navigation services slides*/
 #navigationservices { background: #000; }
@@ -471,9 +471,28 @@ li.fin { width: 60px; }
 #financials .slide-one table td { font-family: MrEavesSanOTReg; font-size :.875em; line-height: 1.5; text-transform: uppercase; }
 #financials .slide-one table td.right { text-align: right; }
 
-#financials .slide-two { height: 475px; }
+#financials .slide-two, #financials .slide-three { padding-top: 100px; height: 475px; }
+#financials .slide-two h1, #financials .slide-three h1 { font-size: 1.3em; line-height: 1.3; margin-bottom: 10px; margin-left: 5.46875%; }
+#financials .slide-two table, #financials .slide-three table { width: 42.328125%; /*465 / 1280*/ text-align: left; margin-right: 4.6875%; /*60 / 1280*/ }
+#financials .slide-two table td, #financials .slide-three table td { font-family: MrEavesSanOTReg; font-size :.875em; line-height: 1.5; text-transform: uppercase; }
 
-#financials .slide-three { height: 475px; }
+/*Awards*/
+#awards { background-color: #fff; }
+#awards .slide-one { padding-top: 120px; height: 455px; }
+#awards .slide-one img { margin-right: 10.546875%; /*135 / 1280*/ }
+#awards .slide-one table { width: 455px; text-align: left; margin-right: 4.6875%; /*60 / 1280*/ }
+#awards .slide-one table td { font-size: .875em; line-height: 1.4; padding-top: 20px; }
+#awards .slide-one table td span { margin-top: 20px; }
+
+/*Thank you*/
+#thankyou { background-color: #fff; }
+#thankyou .slide-one { height: 575px; }
+#thankyou .slide-one img { margin-right: 10.546875%; /*135 / 1280*/ }
+#thankyou .slide-one table { width: 375px; text-align: left; margin-top: 70px; }
+#thankyou .slide-one table td { font-size: .875em; line-height: 1.4; padding-top: 15px; }
+#thankyou .slide-one table td h2 { font-size: 1.6em; }
+#thankyou .slide-one table td p { padding-right: 20px; margin: 0; }
+#thankyou .slide-one table td span { margin-top: 15px; }
 
 /* gallery */
 .gallery {
@@ -845,6 +864,25 @@ li.fin { width: 60px; }
 	#global .slide-two, #program .slide-three, #program .slide-four { padding: 50px 5%; }
 	#global .slide-four img { padding-right: 0; padding-left: 0; }
 	#global .slide-four .text-block { width: auto; }
+	
+	/*Financials*/
+	#financials .slide-one { width: auto !important; text-align: left;  }
+	#financials .slide-one img { float: none; max-width: 100%; left: 0; margin-bottom: 25px; }
+	#financials .slide-one h4 { width: auto !important; margin: 15px 5%; }
+	#financials .slide-one table { width: 90%;  float: none; margin: 0 5%; margin-bottom: 25px; }
+	
+	#financials .slide-two, #financials .slide-three { width: auto !important; text-align: left; padding-top: 10px;  }
+	#financials .slide-two h1, #financials .slide-three h1 { width: auto !important; margin: 15px 5%; }
+	#financials .slide-two table, #financials .slide-three table { width: 90%;  float: none; margin: 0 5%; }
+	#financials .slide-three { padding-bottom: 50px; }
+	
+	/*Awards*/
+	#awards .slide-one { padding-top: 50px; padding-bottom: 50px; height: auto; }
+	#awards .slide-one table { width: 90%;  float: none; margin: 0 5%; margin-bottom: 25px; margin-top: 50px; }
+
+	/*Thank You*/
+	#thankyou .slide-one { padding-bottom: 50px; height: auto; }
+	#thankyou .slide-one table { width: 90%;  float: none; margin: 0 5%; margin-bottom: 25px; margin-top: 50px; }
 }
 
 @media screen and (max-width: 884px) {
